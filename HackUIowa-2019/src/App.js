@@ -7,7 +7,7 @@ import CreateAccount from './components/CreateAccount';
 
 const Home = () => (
   <header className="App-header">
-    <img src="logo.png" className="App-logo" alt="logo" />
+    <img src="logo.jpg" className="App-logo" alt="logo" />
       <div className="Login-buttons">
         <Button color="primary" size="lg" href="/login" block>Login</Button>
         <Button color="secondary" size="lg" href="/mainScreen"block>Guest Login</Button>
