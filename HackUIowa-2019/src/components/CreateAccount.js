@@ -19,7 +19,7 @@ const CreateAccount = () => (
             <Input type="confirmNewPassword" name="confirmNewPassword" id="confirmNewPassword" placeholder="Confirm Password" />
           </FormGroup>
         </Form>
-        <Button color="primary" size="lg" href="/mainScreen" block>Create Account</Button>
+        <Button color="info" size="lg" href="/mainScreen" block>Create Account</Button>
       </div>
     </header>
   )

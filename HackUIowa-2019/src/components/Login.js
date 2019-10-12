@@ -38,7 +38,7 @@ export default class Leaderboard extends React.Component {
               <Label for="password">Password</Label>
               <Input type="password" name="password" id="password" placeholder="Password" />
             </FormGroup>
-            <Button type="submit" color="primary" size="lg" href="/mainScreen" onClick={this.handleSubmit} block>Login</Button> 
+            <Button type="submit" color="info" size="lg" href="/mainScreen" onClick={this.handleSubmit} block>Login</Button> 
           </Form>
         </div>
       </header>
