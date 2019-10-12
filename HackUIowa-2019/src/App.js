@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { Button } from 'reactstrap';
 
 function App() {
   return (
@@ -8,6 +9,9 @@ function App() {
         <p>
           Hello World
         </p>
+        <div>
+          <Button color="primary">primary</Button>
+        </div>
       </header>
     </div>
   );
