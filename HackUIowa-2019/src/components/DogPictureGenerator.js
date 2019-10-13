@@ -1,7 +1,6 @@
 import React from 'react';
 import {Button} from 'reactstrap';
 import './ThinkRock.css';
-import Axios from 'axios';
 import firebase from 'firebase';
 
 // Reference to your entire Firebase database
@@ -28,6 +27,7 @@ export default class DogPictureGenerator extends React.Component {
             })
       }
 
+
       componentDidMount() {
         fetch("https://dog.ceo/api/breeds/image/random")
           .then(data => data.json())
@@ -36,6 +36,7 @@ export default class DogPictureGenerator extends React.Component {
               this.setState({dogImg : response.message});
           });
       }
+      
       render() {
         console.log();
         return (
