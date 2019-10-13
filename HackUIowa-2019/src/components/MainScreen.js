@@ -7,6 +7,7 @@ const MainScreen = () => (
       <div className="Login-buttons">
       <Button color="info" size="lg" href="/" block>Home</Button>
       <Button color="info" size="lg" href="/memeGenerator" block>Meme Generator</Button>
+      <Button color="info" size="lg" href="/game" block>Game</Button>
       </div>
     </header>
   )

@@ -1,8 +1,6 @@
 import React from 'react';
 import { Button, Form, Label, FormGroup, Input, Redirect } from 'reactstrap';
 import firebase from 'firebase';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
-import MainScreen from './MainScreen';
 
 var config = {
   apiKey: "AIzaSyCeIMgoKQyic6rrac9Q0RcWwc6uBq_y7vg",
