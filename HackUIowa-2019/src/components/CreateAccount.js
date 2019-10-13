@@ -1,6 +1,8 @@
 import React from 'react';
-import { Button, Form, Label, FormGroup, Input } from 'reactstrap';
+import { Button, Form, Label, FormGroup, Input, Redirect } from 'reactstrap';
 import firebase from 'firebase';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+import MainScreen from './MainScreen';
 
 var config = {
   apiKey: "AIzaSyCeIMgoKQyic6rrac9Q0RcWwc6uBq_y7vg",
@@ -41,12 +43,7 @@ export default class CreateAccount extends React.Component {
         console.log(error.message);
         alert('Incorrect format');
       });
-      firebase.auth().signInWithEmailAndPassword(this.state.username, this.state.password).catch(function(error) {
-        console.log(error.code);
-        console.log(error.message);
-        alert('User and/or password incorrect');
-      });
-      //go to main screen
+      this.props.history.push('/login');
     }
     else {
       alert('Passwords do not match');
