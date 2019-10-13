@@ -27,6 +27,7 @@ export default class Login extends React.Component {
       alert('User and/or password incorrect');
     });
     //go to main screen
+    this.props.history.push('/mainScreen');
   }
 
   render() {
