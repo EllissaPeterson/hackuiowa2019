@@ -6,7 +6,6 @@ import firebase from 'firebase';
 
 // Reference to your entire Firebase database
 var storage = firebase.storage();
-var storageRef = firebase.storage().ref();
 
 export default class DogPictureGenerator extends React.Component {
     constructor() {
@@ -23,6 +22,8 @@ export default class DogPictureGenerator extends React.Component {
                 var file = new File([response.message], response.message, {
                     type: "img",
                   });
+
+                var storageRef = firebase.storage().ref().child(firebase.auth().currentUser.email);
                 var image = storageRef.child(response.message).put(file);
             })
       }
