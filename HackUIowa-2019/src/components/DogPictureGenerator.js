@@ -1,12 +1,10 @@
 import React from 'react';
 import {Button} from 'reactstrap';
 import './ThinkRock.css';
-import Axios from 'axios';
 import firebase from 'firebase';
 
 // Reference to your entire Firebase database
 var storage = firebase.storage();
-var storageRef = firebase.storage().ref();
 
 export default class DogPictureGenerator extends React.Component {
     constructor() {
@@ -23,9 +21,12 @@ export default class DogPictureGenerator extends React.Component {
                 var file = new File([response.message], response.message, {
                     type: "img",
                   });
+
+                var storageRef = firebase.storage().ref().child(firebase.auth().currentUser.email);
                 var image = storageRef.child(response.message).put(file);
             })
       }
+
 
       componentDidMount() {
         fetch("https://dog.ceo/api/breeds/image/random")
@@ -35,6 +36,7 @@ export default class DogPictureGenerator extends React.Component {
               this.setState({dogImg : response.message});
           });
       }
+      
       render() {
         console.log();
         return (
