@@ -7,6 +7,7 @@ import CreateAccount from './components/CreateAccount';
 import MainScreen from './components/MainScreen';
 import MemeGenerator from './components/MemeGenerator';
 import Game from './components/Game';
+import DogPictureGenerator from './components/DogPictureGenerator';
 
 const Home = () => (
   <header className="App-header">
@@ -29,6 +30,7 @@ function App() {
           <Route exact path="/mainScreen" component={MainScreen} />
           <Route exact path="/memeGenerator" component={MemeGenerator} />
           <Route exact path="/game" component={Game} />
+          <Route exact path="/dogPictureGenerator" component={DogPictureGenerator} />
       </div>
     </Router>
   );
